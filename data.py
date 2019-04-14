@@ -16,7 +16,7 @@ class Data:
         return Workstation(index, jobs)
 
     def build_jobs(self):
-        jobs= []
+        jobs = []
         for i in range(len(self.matrix)):
             jobs.append(Job(i, self.matrix[i][0], self.matrix[i]))
         return jobs
@@ -68,7 +68,7 @@ class Workstation:
     def shortest_job(self, job_ids):
         min2 = 1998
         min_id = -1
-        for i in range (len(job_ids)):
+        for i in range(len(job_ids)):
             if self.jobs[job_ids[i]].lengths[self.index + 1] < min2:
                 min_id = i
                 min2 = self.jobs[job_ids[i]].lengths[self.index + 1]

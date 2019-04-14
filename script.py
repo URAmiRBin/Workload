@@ -15,4 +15,4 @@ for i in range(data.workstations):
         jobs_start.append(workstation.jobs[j].time_done)
 print(max(total_time))
 for i in range(data.jobs):
-    print(jobs_start[i], " ", jobs_start[data.jobs + i])
+    print(jobs_start[i], " ", jobs_start[data.jobs + i], " ", jobs_start[2*data.jobs + i])
